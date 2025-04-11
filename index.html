@@ -32,14 +32,19 @@
       type="image/x-icon"
     />
 
-    <!-- Preload critical fonts -->
+    <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" as="style" />
+    <link rel="preload" href="./assets/css/style.css" as="style" />
+
+    <!-- Load Google Fonts with font-display: swap -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
+      crossorigin="anonymous"
     />
 
     <!-- Inline critical CSS -->
@@ -56,6 +61,7 @@
         background: var(--smoky-black);
         font-family: var(--ff-poppins);
         margin: 0;
+        color: #fff;
       }
       .sidebar,
       article {
@@ -63,11 +69,31 @@
         border: 1px solid var(--jet);
         border-radius: 20px;
         padding: 15px;
+        box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+      }
+      .navbar-list {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+        padding: 0;
+      }
+      .navbar-link {
+        color: inherit;
+        font-size: 15px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      .navbar-link.active {
+        color: var(--orange-yellow-crayola);
       }
     </style>
 
-    <!-- Preload and defer non-critical CSS -->
-    <link rel="preload" href="./assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Load non-critical CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="./assets/css/style.css"></noscript>
   </head>
 
