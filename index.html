@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hashiif Abdillah - Full Stack Developer Portfolio</title>
+    <meta name="description" content="Portfolio Hashiif Abdillah, Full Stack Developer dengan keahlian MERN, Flutter, dan TypeScript. Membangun aplikasi web dan mobile dengan pendekatan Vibe Coding." />
+    <meta name="keywords" content="full stack developer, web development, mobile apps, MERN stack, Flutter, TypeScript, UI/UX design, portfolio" />
+    <meta name="author" content="Hashiif Abdillah" />
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Hashiif Abdillah - Full Stack Developer Portfolio" />
+    <meta property="og:description" content="Portfolio Hashiif Abdillah, Full Stack Developer dengan keahlian MERN, Flutter, dan TypeScript. Membangun aplikasi web dan mobile dengan pendekatan Vibe Coding." />
+    <meta property="og:image" content="./assets/images/my-avatarr.png" />
+    <meta property="og:url" content="https://hasseeve.vercel.app" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="google-site-verification" content="ly91HLsSvzgb3I1Ug7BSNAcMLr83MytOkFhZFniibok" />
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/my-avatarr.png"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--
+    - #MAIN
+  -->
+
+    <main>
+      <!--
+      - #SIDEBAR
+    -->
+
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              src="./assets/images/my-avatarr.png"
+              alt="Hashiif Abdillah"
+              width="80"
+            />
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Richard hanrick">Hashiif Abdillah</h1>
+
+            <p class="title">Full Stack Developer</p>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+
+                <a href="mailto:hashiif.abdillah@gmail.com" class="contact-link"
+                  >hashiif.abdillah@gmail.com</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+
+                <a href="tel:+6282220760272" class="contact-link"
+                  >+62 8222-0760-272</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+
+                <address>Cilacap, Jawa Tengah Indonesia</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="https://github.com/hashiifab" class="social-link">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a
+                href="https://www.linkedin.com/in/hashiif-abdillah-665373297/"
+                class="social-link"
+              >
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a
+                href="https://www.instagram.com/hashiifabdillah/"
+                class="social-link"
+              >
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+      - #main-content
+    -->
+
+      <div class="main-content">
+        <!--
+        - #NAVBAR
+      -->
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>About</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Portfolio</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Blog</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Contact</button>
+            </li>
+          </ul>
+        </nav>
+
+        <!--
+        - #ABOUT
+      -->
+
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
+
+          <section class="about-text">
+            <p>
+              I believe building today isn’t just about code — it’s about
+              turning ideas into results, fast.
+            </p>
+
+            <p>
+              I’m a Full-Stack Developer who builds through Vibe Coding: using
+              natural language and AI to create real apps smarter and faster.
+            </p>
+
+            <p>
+              I work with MERN, Flutter, and TypeScript, using tools like
+              ChatGPT and GitHub Copilot to simplify backend logic, UI, and API
+              integration.
+            </p>
+
+            <p>
+              What I bring: fast learning, adaptability, technical depth, and
+              clarity in execution.
+            </p>
+
+            <p>
+              Currently building full-stack projects and open to internships,
+              junior roles, or freelance work — anywhere I can learn fast and
+              help build smart.
+            </p>
+
+            <p>
+              I'm always interested in collaborating with teams that value
+              clarity, adaptability, and building with intention in the age of
+              AI.
+            </p>
+          </section>
+
+          <!--
+          - service
+        -->
+
+          <section class="service">
+            <h3 class="h3 service-title">What i'm doing</h3>
+
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-design.svg"
+                    alt="design icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">UI/UX design</h4>
+
+                  <p class="service-item-text">
+                    The most modern and high-quality design made at a
+                    professional level.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Web development icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web development</h4>
+
+                  <p class="service-item-text">
+                    High-quality development of sites at the professional level.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-app.svg"
+                    alt="mobile app icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                  <p class="service-item-text">
+                    Professional development of applications for iOS and
+                    Android.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-full-service.svg"
+                    alt="camera icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Full service</h4>
+
+                  <p class="service-item-text">
+                    I make high-quality Web design, mobile apps, full stack
+                    development.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!--
+          - tech stack
+        -->
+
+          <section class="tech-stack">
+            <h3 class="h3 tech-stack-title">Tech Stack</h3>
+
+            <div class="tech-scroll-container">
+              <div class="tech-icons">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                  alt="MongoDB"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                  alt="Express.js"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  alt="React.js"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                  alt="Node.js"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                  alt="Next.js"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  alt="HTML5"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                  alt="CSS3"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                  alt="Tailwind CSS"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                  alt="Bootstrap"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
+                  alt="Laravel"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                  alt="PHP"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                  alt="MySQL"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
+                  alt="SQLite"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                  alt="Firebase"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                  alt="Flutter"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
+                  alt="Dart"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  alt="JavaScript"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                  alt="PostgreSQL"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                  alt="Git"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                  alt="Docker"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                  alt="TypeScript"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg"
+                  alt="Prisma"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                  alt="Figma"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                  alt="VS Code"
+                  class="tech-icon"
+                />
+
+                <!-- duplicate -->
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                  alt="MongoDB"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                  alt="Express.js"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  alt="React.js"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                  alt="Node.js"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                  alt="Next.js"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  alt="HTML5"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                  alt="CSS3"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                  alt="Tailwind CSS"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                  alt="Bootstrap"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
+                  alt="Laravel"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                  alt="PHP"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                  alt="MySQL"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
+                  alt="SQLite"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                  alt="Firebase"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                  alt="Flutter"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
+                  alt="Dart"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  alt="JavaScript"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                  alt="PostgreSQL"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                  alt="Git"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                  alt="Docker"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                  alt="TypeScript"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg"
+                  alt="Prisma"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                  alt="Figma"
+                  class="tech-icon"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                  alt="VS Code"
+                  class="tech-icon"
+                />
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <!--
+        - #RESUME
+      -->
+
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
+
+          <!-- Education -->
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+              <h3 class="h3">Education</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  SMK IDN Boarding School Solo
+                </h4>
+                <span>July 2023 – Expected July 2026</span>
+                <p class="timeline-text">
+                  Software Engineering, Class 11. Actively involved in
+                  leadership and technical development.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <!-- Experience -->
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="briefcase-outline"></ion-icon>
+              </div>
+              <h3 class="h3">Experience</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Project Manager Intern – Full-Stack Web Reservation Platform
+                </h4>
+                <span>March 2025 – Present</span>
+                <p class="timeline-text">
+                  Led a 3-member team to develop a responsive full-stack web
+                  reservation platform. Improved REST API efficiency by 20% and
+                  reduced booking errors by 30%.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Trainer – Flutter, SMK IDN Boarding School Solo
+                </h4>
+                <span>October 2024</span>
+                <p class="timeline-text">
+                  Conducted 2-day Flutter workshop for 2 students. Delivered
+                  hands-on training that improved their coding proficiency by
+                  20%.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Instructor – Web & Thunkable, Alhazen Academy
+                </h4>
+                <span>February 2024 – June 2024</span>
+                <p class="timeline-text">
+                  Taught project-based development to 25+ students in 2 Islamic
+                  boarding schools. Helped deploy 10+ apps and got 90% positive
+                  feedback.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <!-- Achievements -->
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="trophy-outline"></ion-icon>
+              </div>
+              <h3 class="h3">Achievements</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Best Student – SMK IDN Boarding School Solo
+                </h4>
+                <span>2024</span>
+                <p class="timeline-text">
+                  Selected as Best Student among 90+ students at SMK IDN
+                  Boarding School Solo, based on academic excellence and
+                  leadership contributions.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Web Dev & Cloud Certifications
+                </h4>
+                <span>2023 – 2024</span>
+                <p class="timeline-text">
+                  Completed 10+ professional certifications with a 95% success
+                  rate. See details on LinkedIn profile.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Tech Competitions</h4>
+                <span>2023 – 2024</span>
+                <p class="timeline-text">
+                  Participated in 4+ school-level competitions in programming
+                  and UI/UX design, with multiple top 10 finishes.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <!-- Leadership -->
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="people-outline"></ion-icon>
+              </div>
+              <h3 class="h3">Leadership</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Chief Editor & Head of Religious Affairs
+                </h4>
+                <span>July 2024 – January 2025</span>
+                <p class="timeline-text">
+                  Led a team of 10 to publish the school magazine. Organized 10+
+                  religious programs and increased student participation by 30%.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <!-- Skills -->
+          <section class="skill">
+            <h3 class="h3 skills-title">My Skills</h3>
+
+            <!-- Technical Skills -->
+            <h4 class="h4" style="margin-top: 1rem">Technical Skills</h4>
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Node.js / Express.js / TypeScript</h5>
+                  <data value="85">85%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 85%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">React / Next.js / Vue</h5>
+                  <data value="80">80%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Flutter / Dart</h5>
+                  <data value="90">90%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">PostgreSQL / MongoDB / Prisma</h5>
+                  <data value="75">75%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 75%"></div>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Soft Skills -->
+            <h4 class="h4" style="margin-top: 2rem">Soft Skills</h4>
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Leadership & Team Management</h5>
+                  <data value="85">85%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 85%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Public Speaking & Teaching</h5>
+                  <data value="90">90%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Problem Solving</h5>
+                  <data value="80">80%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Time Management</h5>
+                  <data value="75">75%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 75%"></div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Download CV -->
+
+          <section style="text-align: center; margin-top: 2rem">
+            <a href="assets/cv.pdf" download class="btn-download-cv">
+              Download CV
+            </a>
+          </section>
+
+          <style>
+            .btn-download-cv {
+              display: inline-block;
+              padding: 15px 35px;
+              min-width: 180px;
+              background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.1),
+                rgba(255, 255, 255, 0.05)
+              );
+              color: var(--orange-yellow-crayola);
+              font-weight: var(--fw-500);
+              text-decoration: none;
+              border-radius: 20px;
+              transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+              box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+              backdrop-filter: blur(10px);
+              -webkit-backdrop-filter: blur(10px);
+              position: relative;
+              overflow: hidden;
+              text-align: center;
+              border: 1px solid rgba(255, 255, 255, 0.18);
+            }
+
+            .btn-download-cv::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(
+                135deg,
+                var(--orange-yellow-crayola) 0%,
+                transparent 100%
+              );
+              opacity: 0;
+              transition: all 0.5s ease;
+            }
+
+            .btn-download-cv:hover {
+              transform: translateY(-5px) scale(1.03);
+              box-shadow: 0 15px 45px
+                rgba(var(--orange-yellow-crayola-rgb), 0.2);
+              color: var(--white);
+              border-color: rgba(255, 255, 255, 0.3);
+            }
+
+            .btn-download-cv:hover::before {
+              opacity: 0.2;
+            }
+
+            .btn-download-cv:active {
+              transform: translateY(-2px) scale(0.98);
+            }
+          </style>
+        </article>
+
+        <!--
+        - #PORTFOLIO
+      -->
+
+        <article class="portfolio" data-page="portfolio">
+          <header>
+            <h2 class="h2 article-title">Portfolio</h2>
+          </header>
+
+          <section class="projects">
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Applications</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Web development</button>
+              </li>
+            </ul>
+
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-select-value>
+                  Select category
+                </div>
+
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
+
+              <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>All</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Applications</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Web development</button>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="project-list">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://github.com/hashiifab/social-media">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 1.webp"
+                      alt="Project 1"
+                      loading="lazy"
+                      data-filter="app"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">MERN Social Media App</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://github.com/hashiifab/Trisari-Data-Indonusa">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 2.webp"
+                      alt="Project 2"
+                      loading="lazy"
+                      data-filter="app"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Trisari Data Indonusa</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://github.com/hashiifab/tkit-page">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 3.webp"
+                      alt="Project 3"
+                      loading="lazy"
+                      data-filter="app"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">TK Islam Terpadu Muthmainnah</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="https://github.com/hashiifab/schedule_generator_app">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 4.webp"
+                      alt="Project 4"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">
+                    Schedule Generator App - Flutter
+                  </h3>
+
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://github.com/hashiifab/queen-nara">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 5.webp"
+                      alt="Project 5"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Queen Nara</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://github.com/hashiifab/lebouffe-shoes">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 6.webp"
+                      alt="Project 6"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Lebouffe Shoes</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://github.com/hashiifab/RodGronn-Coffee">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 7.webp"
+                      alt="Project 7"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">RodGronn CoffeeLab</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://github.com/hashiifab/songify">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 8.webp"
+                      alt="Project 8"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Songify</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://github.com/hashiifab/snapgram">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 9.webp"
+                      alt="Project 9"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">SocialMedia App - React + Vite</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://github.com/hashiifab/hotels-management">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 10.webp"
+                      alt="Project 10"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Next.js Hotel Booking Platform</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://github.com/hashiifab/code-craft">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 11.webp"
+                      alt="Project 11"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">
+                    CodeCraft – Next.js 15 SaaS Code Editor
+                  </h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://github.com/hashiifab/Anggode-Coffee">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 12.webp"
+                      alt="Project 12"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Anggode-Coffee</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://github.com/hashiifab/Nabila-Salon">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 13.webp"
+                      alt="Project 13"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Nabila Salon</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://github.com/hashiifab/elkaavie">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 14.webp"
+                      alt="Project 14"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Elkaavie Platform</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="https://github.com/hashiifab/stylify-onlineShop">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 15.webp"
+                      alt="Project 15"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">
+                    Stylify - Flutter E-commerce App
+                  </h3>
+
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="https://github.com/hashiifab/Ticky-Ticketing-App">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 16.webp"
+                      alt="Project 16"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">
+                    Ticky - Flutter Train Ticket Booking App
+                  </h3>
+
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="https://github.com/hashiifab/absensi-fullstack">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 17.webp"
+                      alt="Project 17"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">
+                    Presence System - Laravel & Flutter Stack
+                  </h3>
+
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="https://github.com/hashiifab/absensi_app">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 18.webp"
+                      alt="Project 18"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">
+                    Attendance App with Face Detection - Flutter
+                  </h3>
+
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="https://github.com/hashiifab/Avest_Ecommerce_UI">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 19.webp"
+                      alt="Project 19"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Avest E-Commerce - Flutter UI</h3>
+
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://github.com/hashiifab/ecommerce">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 20.webp"
+                      alt="Project 20"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">
+                    E-Commerce Sanity + Stripe Integration
+                  </h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="https://github.com/hashiifab/calculator">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Project 21.webp"
+                      alt="Project 21"
+                      loading="lazy"
+                      data-filter="web"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Flutter Calculator App</h3>
+
+                  <p class="project-category">Application</p>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #BLOG
+      -->
+
+        <article class="blog" data-page="blog">
+          <header>
+            <h2 class="h2 article-title">Blog</h2>
+          </header>
+
+          <section class="blog-posts">
+            <ul class="blog-posts-list">
+              <li class="blog-post-item">
+                <a
+                  href="https://hasseeve.beehiiv.com/p/backend-developer-roadmap-2025-the-complete-guide"
+                >
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog/blog 1.webp"
+                      alt="backend developer roadmap"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Programming</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2025-04-11">Apr 11th, 2025</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Backend Developer Roadmap 2025: The Complete Guide
+                    </h3>
+
+                    <p class="blog-text">
+                      If you’re looking to become a backend developer, this
+                      guide is for you. Whether you’re ....
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="https://hasseeve.beehiiv.com/">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog/blog 2.webp"
+                      alt="Why Go Should Be Your Best First Step into Backend Development"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Programming</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2025-04-11">Apr 11th, 2025 </time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Why Go Should Be Your Best First Step into Backend
+                      Development
+                    </h3>
+
+                    <p class="blog-text">
+                      Alright, so you’ve totally nailed the frontend stuff. You
+                      can make CSS behave, get ...
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="https://hasseeve.beehiiv.com/">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog/blog 3.webp"
+                      alt="Introducing the Supabase UI Library"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Programming</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2025-04-12">Apr 12th, 2025</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Introducing the Supabase UI Library
+                    </h3>
+
+                    <p class="blog-text">
+                      Supabase has released an official UI Library consisting of
+                      ready-to-use components ...
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="https://hasseeve.beehiiv.com/">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog/blog 4.webp"
+                      alt="Design for the AI age"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2025-04-12">Apr 12th, 2025</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">Design for the AI age</h3>
+
+                    <p class="blog-text">
+                      For decades, interfaces have guided users along predefined
+                      roads. Think files and ...
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="https://hasseeve.beehiiv.com/">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog/blog 5.webp"
+                      alt="Node.js: easy to learn, hard to master - perfect for AI"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Programming</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2025-04-14">Apr 14th, 2025 </time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Node.js: easy to learn, hard to master - perfect for AI
+                    </h3>
+
+                    <p class="blog-text">
+                      A years ago, I got incredibly excited about a new
+                      technology for writing any ...
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="https://hasseeve.beehiiv.com/">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog/blog 6.webp"
+                      alt="Why AI agents are the future of web navigation"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Programming</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2025-04-15">Apr 15th, 2025</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Why AI agents are the future of web navigation
+                    </h3>
+
+                    <p class="blog-text">
+                      Rachel-Lee Nabors reflects on the web’s shift from an open
+                      space to ...
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #CONTACT
+      -->
+
+        <article class="contact" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
+
+          <section class="mapbox" data-mapbox>
+            <figure>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63308.78837680899!2d109.01785331477747!3d-7.697046994456112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e65413b8c5b0b6f%3A0x5027a76e356b7b0!2sKabupaten%20Cilacap!5e0!3m2!1sen!2sid!4v1712818247850!5m2!1sen!2sid"
+                width="400"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </figure>
+          </section>
+
+          <section class="contact-form">
+            <h3 class="h3 form-title">Contact Form</h3>
+
+            <form
+              id="contactForm"
+              onsubmit="return handleSubmit(event)"
+              class="form"
+              data-form
+            >
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="fullname"
+                  class="form-input"
+                  placeholder="Full name"
+                  required
+                  data-form-input
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Email address"
+                  required
+                  data-form-input
+                />
+              </div>
+
+              <textarea
+                name="message"
+                class="form-input"
+                placeholder="Your Message"
+                required
+                data-form-input
+              ></textarea>
+
+              <button class="form-btn" type="submit" data-form-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+
+              <script>
+                function handleSubmit(event) {
+                  event.preventDefault();
+                  const form = event.target;
+                  const fullname = form.fullname.value;
+                  const email = form.email.value;
+                  const message = form.message.value;
+
+                  const mailtoLink = `mailto:hashiif.abdillah@gmail.com?subject=Contact from ${fullname}&body=${encodeURIComponent(
+                    `Name: ${fullname}\nEmail: ${email}\n\nMessage:\n${message}`
+                  )}`;
+
+                  window.location.href = mailtoLink;
+                  return false;
+                }
+              </script>
+            </form>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      const scroller = document.querySelector(".tech-icons");
+      scroller.innerHTML += scroller.innerHTML;
+    </script>
+  </body>
+</html>
