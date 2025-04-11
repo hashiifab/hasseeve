@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://hasseeve.vercel.app/sitemap.xml
