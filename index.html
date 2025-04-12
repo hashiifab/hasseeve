@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hashiif Abdillah - Full Stack Developer Portfolio | MERN, Flutter, TypeScript</title>
-    <meta name="description" content="Portfolio Hashiif Abdillah, Full Stack Developer dengan keahlian MERN, Flutter, dan TypeScript. Membangun aplikasi web dan mobile dengan pendekatan Vibe Coding." />
-    <meta name="keywords" content="full stack developer, web development, mobile apps, MERN stack, Flutter, TypeScript, UI/UX design, portfolio, vibe coding, frontend developer, backend developer" />
+    <meta name="description" content="Portfolio Hashiif Abdillah (Hasseeve) - Full Stack Developer profesional dengan keahlian MERN Stack, Flutter, dan TypeScript. Spesialis pengembangan web dan aplikasi mobile dengan pendekatan Vibe Coding." />
+    <meta name="keywords" content="hashiif, Hashiif, hasif, Hasif, hashiif abdillah, Hashiif Abdillah, Hasseeve, hasseeve, full stack developer, developer indonesia, web developer, mobile developer, MERN stack developer, Flutter developer, TypeScript developer, UI/UX designer, portfolio developer, vibe coding, frontend developer, backend developer" />
     <meta name="author" content="Hashiif Abdillah" />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://hasseeve.vercel.app" />
     
     <!-- Open Graph / Social Media Meta Tags -->
@@ -32,18 +33,22 @@
       type="image/x-icon"
     />
 
-    <!-- Preload critical resources -->
+    <!-- Preload critical fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" as="style" />
-    <link rel="preload" href="./assets/css/style.css" as="style" />
-
-    <!-- Load Google Fonts with font-display: swap -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
+      fetchpriority="high"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2"
+      type="font/woff2"
       crossorigin="anonymous"
     />
 
@@ -61,7 +66,6 @@
         background: var(--smoky-black);
         font-family: var(--ff-poppins);
         margin: 0;
-        color: #fff;
       }
       .sidebar,
       article {
@@ -69,32 +73,15 @@
         border: 1px solid var(--jet);
         border-radius: 20px;
         padding: 15px;
-        box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-      }
-      .navbar-list {
-        display: flex;
-        gap: 30px;
-        list-style: none;
-        padding: 0;
-      }
-      .navbar-link {
-        color: inherit;
-        font-size: 15px;
-        font-weight: 500;
-        text-transform: uppercase;
-        padding: 5px;
-        background: none;
-        border: none;
-        cursor: pointer;
-      }
-      .navbar-link.active {
-        color: var(--orange-yellow-crayola);
       }
     </style>
 
-    <!-- Load non-critical CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css" media="print" onload="this.media='all'">
+    <!-- Preload and defer non-critical CSS -->
+    <link rel="preload" href="./assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" fetchpriority="low">
     <noscript><link rel="stylesheet" href="./assets/css/style.css"></noscript>
+    
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="./assets/images/my-avatarr.webp" fetchpriority="high" />
   </head>
 
   <body>
@@ -113,10 +100,11 @@
             <img
               src="./assets/images/my-avatarr.webp"
               alt="Hashiif Abdillah"
-              width="80"
-              height="80"
+              width="100"
+              height="auto"
               loading="eager"
               fetchpriority="high"
+              decoding="async"
             />
           </figure>
 
@@ -336,6 +324,9 @@
                     src="./assets/images/icon-app.svg"
                     alt="mobile app icon"
                     width="40"
+                    height="40"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
@@ -355,6 +346,9 @@
                     src="./assets/images/icon-full-service.svg"
                     alt="camera icon"
                     width="40"
+                    height="40"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
@@ -383,16 +377,28 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
                   alt="MongoDB"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
                   alt="Express.js"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                   alt="React.js"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
@@ -505,16 +511,28 @@
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
                   alt="MongoDB"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
                   alt="Express.js"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                   alt="React.js"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
