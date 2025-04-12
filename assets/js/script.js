@@ -123,3 +123,21 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
+
+// Fun console message
+console.log("%c👋 Hey there, curious developer!", "font-size: 24px; font-weight: bold; color: #4CAF50;");
+
+console.log(`%c
+   ____  _                 _       
+  |  _ \| | __ _ _   _  __| | ___  
+  | |_) | |/ _\` | | | |/ _\` |/ _ \ 
+  |  __/| | (_| | |_| | (_| | (_) |
+  |_|   |_|\__,_|\__, |\__,_|\___/ 
+                 |___/             
+`, "color: #2196F3;");
+
+console.log("%cWhat are you doing here? 🤔", "font-size: 20px; color: #FF5722;");
+console.log("%cLooking for bugs? Or maybe you're just curious about how this site works? 🐞", "color: #9C27B0;");
+console.log("%cWell, since you're here...", "font-style: italic; color: #607D8B;");
+console.log("%cFun fact: This site was made with lots of ☕ and 💖", "font-size: 16px; color: #E91E63;");
+console.log("%cPS: You found an easter egg! 🎉", "font-weight: bold; color: #FFC107;");

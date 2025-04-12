@@ -4,25 +4,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hashiif Abdillah - Full Stack Developer Portfolio | MERN, Flutter, TypeScript</title>
-    <meta name="description" content="Portfolio Hashiif Abdillah (Hasseeve) - Full Stack Developer profesional dengan keahlian MERN Stack, Flutter, dan TypeScript. Spesialis pengembangan web dan aplikasi mobile dengan pendekatan Vibe Coding." />
-    <meta name="keywords" content="hashiif, Hashiif, hasif, Hasif, hashiif abdillah, Hashiif Abdillah, Hasseeve, hasseeve, full stack developer, developer indonesia, web developer, mobile developer, MERN stack developer, Flutter developer, TypeScript developer, UI/UX designer, portfolio developer, vibe coding, frontend developer, backend developer" />
+    <title>
+      Hashiif Abdillah - Full Stack Developer Portfolio | MERN, Flutter,
+      TypeScript
+    </title>
+    <meta
+      name="description"
+      content="Portfolio Hashiif Abdillah (Hasseeve) - Full Stack Developer profesional dengan keahlian MERN Stack, Flutter, dan TypeScript. Spesialis pengembangan web dan aplikasi mobile dengan pendekatan Vibe Coding."
+    />
+    <meta
+      name="keywords"
+      content="hashiif, Hashiif, hasif, Hasif, hashiif abdillah, Hashiif Abdillah, Hasseeve, hasseeve, full stack developer, developer indonesia, web developer, mobile developer, MERN stack developer, Flutter developer, TypeScript developer, UI/UX designer, portfolio developer, vibe coding, frontend developer, backend developer"
+    />
     <meta name="author" content="Hashiif Abdillah" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://hasseeve.vercel.app" />
-    
+
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Hashiif Abdillah - Full Stack Developer Portfolio | MERN, Flutter, TypeScript" />
-    <meta property="og:description" content="Portfolio Hashiif Abdillah, Full Stack Developer dengan keahlian MERN, Flutter, dan TypeScript. Membangun aplikasi web dan mobile dengan pendekatan Vibe Coding." />
-    <meta property="og:image" content="https://hasseeve.vercel.app/assets/images/my-avatarr.webp" />
+    <meta
+      property="og:title"
+      content="Hashiif Abdillah - Full Stack Developer Portfolio | MERN, Flutter, TypeScript"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio Hashiif Abdillah, Full Stack Developer dengan keahlian MERN, Flutter, dan TypeScript. Membangun aplikasi web dan mobile dengan pendekatan Vibe Coding."
+    />
+    <meta
+      property="og:image"
+      content="https://hasseeve.vercel.app/assets/images/my-avatarr.webp"
+    />
     <meta property="og:url" content="https://hasseeve.vercel.app" />
     <meta property="og:site_name" content="Hashiif Abdillah Portfolio" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Hashiif Abdillah - Full Stack Developer Portfolio" />
-    <meta name="twitter:description" content="Full Stack Developer dengan keahlian MERN, Flutter, dan TypeScript" />
-    <meta name="twitter:image" content="https://hasseeve.vercel.app/assets/images/my-avatarr.webp" />
-    <meta name="google-site-verification" content="ly91HLsSvzgb3I1Ug7BSNAcMLr83MytOkFhZFniibok" />
+    <meta
+      name="twitter:title"
+      content="Hashiif Abdillah - Full Stack Developer Portfolio"
+    />
+    <meta
+      name="twitter:description"
+      content="Full Stack Developer dengan keahlian MERN, Flutter, dan TypeScript"
+    />
+    <meta
+      name="twitter:image"
+      content="https://hasseeve.vercel.app/assets/images/my-avatarr.webp"
+    />
+    <meta
+      name="google-site-verification"
+      content="ly91HLsSvzgb3I1Ug7BSNAcMLr83MytOkFhZFniibok"
+    />
 
     <!--
     - favicon
@@ -33,22 +63,13 @@
       type="image/x-icon"
     />
 
-    <!-- Preload critical fonts -->
+    <!-- Load fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-      fetchpriority="high"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      as="font"
-      href="https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2"
-      type="font/woff2"
+      fetchpriority="low"
       crossorigin="anonymous"
     />
 
@@ -77,11 +98,22 @@
     </style>
 
     <!-- Preload and defer non-critical CSS -->
-    <link rel="preload" href="./assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" fetchpriority="low">
-    <noscript><link rel="stylesheet" href="./assets/css/style.css"></noscript>
-    
+    <link
+      rel="preload"
+      href="./assets/css/style.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      fetchpriority="low"
+    />
+    <noscript><link rel="stylesheet" href="./assets/css/style.css" /></noscript>
+
     <!-- Preload critical images -->
-    <link rel="preload" as="image" href="./assets/images/my-avatarr.webp" fetchpriority="high" />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/my-avatarr.webp"
+      fetchpriority="high"
+    />
   </head>
 
   <body>
@@ -287,6 +319,10 @@
                     src="./assets/images/icon-design.svg"
                     alt="design icon"
                     width="40"
+                    height="40"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
                   />
                 </div>
 
@@ -306,6 +342,10 @@
                     src="./assets/images/icon-dev.svg"
                     alt="Web development icon"
                     width="40"
+                    height="40"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
                   />
                 </div>
 
@@ -373,140 +413,256 @@
 
             <div class="tech-scroll-container">
               <div class="tech-icons">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                  alt="MongoDB"
-                  class="tech-icon"
-                  width="40"
-                  height="40"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
-                  alt="Express.js"
-                  class="tech-icon"
-                  width="40"
-                  height="40"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                  alt="React.js"
-                  class="tech-icon"
-                  width="40"
-                  height="40"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                  alt="Node.js"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-                  alt="Next.js"
-                  class="tech-icon"
-                />
+                <!-- ⚙️ Languages -->
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
                   alt="HTML5"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
                 />
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
                   alt="CSS3"
                   class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
-                  alt="Tailwind CSS"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                  alt="Bootstrap"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
-                  alt="Laravel"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-                  alt="PHP"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                  alt="MySQL"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
-                  alt="SQLite"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
-                  alt="Firebase"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-                  alt="Flutter"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
-                  alt="Dart"
-                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
                 />
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                   alt="JavaScript"
                   class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                  alt="PostgreSQL"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                  alt="Git"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                  alt="Docker"
-                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
                 />
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
                   alt="TypeScript"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
                 />
                 <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg"
-                  alt="Prisma"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                  alt="PHP"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
                 />
                 <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-                  alt="Figma"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                  alt="Python"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
                 />
                 <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                  alt="VS Code"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                  alt="Java"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                  alt="C#"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+                  alt="C"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
                 />
 
-                <!-- duplicate -->
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
+                  alt="Dart"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+
+                <!-- 🎨 Styling & Design -->
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                  alt="Bootstrap"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                  alt="Sass"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+
+                <!-- 🖥️ Frontend Frameworks -->
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  alt="React"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                  alt="Vue.js"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                  alt="Angular"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                  alt="Flutter"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+
+                <!-- 🛠️ Backend & Frameworks -->
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                  alt="Node.js"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
+                  alt="Laravel"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                  alt="Spring"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
+                  alt="GraphQL"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg"
+                  alt="Prisma"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+                  alt="FastAPI"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+
+                <!-- 💾 Database & BaaS -->
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                  alt="Firebase"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg"
+                  alt="Supabase"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
                   alt="MongoDB"
@@ -515,129 +671,123 @@
                   height="40"
                   loading="lazy"
                   decoding="async"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
-                  alt="Express.js"
-                  class="tech-icon"
-                  width="40"
-                  height="40"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                  alt="React.js"
-                  class="tech-icon"
-                  width="40"
-                  height="40"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                  alt="Node.js"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-                  alt="Next.js"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                  alt="HTML5"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                  alt="CSS3"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
-                  alt="Tailwind CSS"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                  alt="Bootstrap"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
-                  alt="Laravel"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-                  alt="PHP"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                  alt="MySQL"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
-                  alt="SQLite"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
-                  alt="Firebase"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-                  alt="Flutter"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
-                  alt="Dart"
-                  class="tech-icon"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                  alt="JavaScript"
-                  class="tech-icon"
+                  fetchpriority="low"
                 />
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
                   alt="PostgreSQL"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                  alt="MySQL"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
+                  alt="SQLite"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                  alt="Redis"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+
+                <!-- 🔧 DevOps & Tools -->
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                  alt="Docker"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
                 />
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
                   alt="Git"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
                 />
                 <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                  alt="Docker"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                  alt="VSCode"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
                 />
                 <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                  alt="TypeScript"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"
+                  alt="Bash"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
                 />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg"
-                  alt="Prisma"
-                  class="tech-icon"
-                />
+
+                <!-- 🎨 Design Tools -->
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
                   alt="Figma"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
                 />
                 <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                  alt="VS Code"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
+                  alt="Canva"
                   class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+
+                <!-- 📦 Others -->
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_logo_%282014-2020%29.svg"
+                  alt="Google Sheets"
+                  class="tech-icon"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
                 />
               </div>
             </div>
@@ -903,7 +1053,7 @@
                 rgba(255, 255, 255, 0.05)
               );
               color: var(--orange-yellow-crayola);
-              font-weight: var(--fw-500);
+              font-weight: var(--ff-500);
               text-decoration: none;
               border-radius: 20px;
               transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1420,7 +1570,10 @@
                     <img
                       src="./assets/images/projects/Project 17.webp"
                       alt="Project 17"
+                      width="340"
+                      height="240"
                       loading="lazy"
+                      decoding="async"
                       data-filter="web"
                     />
                   </figure>

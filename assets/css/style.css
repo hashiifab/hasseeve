@@ -1304,28 +1304,35 @@ textarea.form-input::-webkit-resizer {
 
 .tech-icons {
   display: flex;
-  animation: scrollText 20s linear infinite;
+  flex-wrap: nowrap;
+  gap: 40px;
   padding: 1rem 0;
-  width: 200%;
-  font-size: 0;
+  animation: scroll 20s linear infinite;
+  width: max-content;
 }
 
 .tech-icon {
-  height: 60px;
-  width: 60px;
+  display: block;
+  height: 40px;
+  width: 40px;
+  min-width: 40px;
   margin: 0;
   padding: 0;
   transition: transform 0.3s ease;
-}
-
-.tech-icons {
-  display: flex;
-  gap: 40px;
-  animation: scroll 10s linear infinite;
+  object-fit: contain;
 }
 
 .tech-icon:hover {
   transform: scale(1.15);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes scroll {
