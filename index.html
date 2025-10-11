@@ -116,8 +116,7 @@
     </style>
 
     <!-- Preload and defer non-critical CSS -->
-    <link rel="preload" href="./assets/css/style.css" as="style" onload="this.rel='stylesheet'" />
-<noscript><link rel="stylesheet" href="./assets/css/style.css"></noscript>
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
     <!-- Preload critical images -->
     <link
@@ -126,12 +125,7 @@
       href="./assets/images/my-avatarr.webp"
       fetchpriority="high"
     />
-    <link rel="preconnect" href="https://unpkg.com" crossorigin />
-  <link rel="dns-prefetch" href="https://unpkg.com" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="/assets/js/ionicons/ionicons.esm.js" as="script" type="module" crossorigin>
-</head>
+  </head>
 
   <body>
 
@@ -1731,20 +1725,18 @@
     <!--
     - custom js link
   -->
-    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/script.js"></script>
 
     <!--
     - ionicon link
   -->
     <script
       type="module"
-      src="./assets/js/ionicons/ionicons.esm.js"
-      defer
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
     <script
       nomodule
-      src="./assets/js/ionicons/ionicons.js"
-      defer
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
 
     <script>
