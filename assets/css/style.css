@@ -2051,3 +2051,12 @@ textarea.form-input::-webkit-resizer {
     max-width: 700px;
   }
 }
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: var(--orange-yellow-crayola);
+  text-decoration: underline;
+}
