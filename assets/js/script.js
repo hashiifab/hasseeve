@@ -141,3 +141,76 @@ console.log("%cLooking for bugs? Or maybe you're just curious about how this sit
 console.log("%cWell, since you're here...", "font-style: italic; color: #607D8B;");
 console.log("%cFun fact: This site was made with lots of ☕ and 💖", "font-size: 16px; color: #E91E63;");
 console.log("%cPS: You found an easter egg! 🎉", "font-weight: bold; color: #FFC107;");
+
+// Music Player Controls
+const backgroundMusic = document.getElementById('background-music');
+const playPauseButton = document.getElementById('play-pause-button');
+const speedSlider = document.getElementById('speed-slider');
+const speedDisplay = document.getElementById('speed-display');
+const musicToggleButton = document.getElementById('music-toggle-button');
+const musicControlsPopup = document.getElementById('music-controls-popup');
+
+let isPlaying = false;
+
+musicToggleButton.addEventListener('click', () => {
+  musicControlsPopup.classList.toggle('active');
+});
+
+playPauseButton.addEventListener('click', () => {
+  if (isPlaying) {
+    backgroundMusic.pause();
+    playPauseButton.textContent = 'Play';
+    console.log("Music paused.");
+  } else {
+    try {
+      backgroundMusic.play();
+      playPauseButton.textContent = 'Pause';
+      console.log("Music playing.");
+    } catch (error) {
+      console.error("Error playing music:", error);
+      alert("Music autoplay is blocked by the browser. Please interact with the page to play music.");
+    }
+  }
+  isPlaying = !isPlaying;
+});
+
+speedSlider.addEventListener('input', () => {
+  backgroundMusic.playbackRate = speedSlider.value;
+  speedDisplay.textContent = `${speedSlider.value}x`;
+});
+
+// Autoplay on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+  try {
+    backgroundMusic.play();
+    playPauseButton.textContent = 'Pause';
+    isPlaying = true;
+    console.log("Attempting to autoplay music.");
+  } catch (error) {
+    console.error("Autoplay blocked:", error);
+    playPauseButton.textContent = 'Play';
+    isPlaying = false;
+  }
+});
+
+// Pause/resume music on tab visibility change
+let wasPlayingBeforeHidden = false;
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    if (isPlaying) {
+      backgroundMusic.pause();
+      wasPlayingBeforeHidden = true;
+      console.log("Music paused due to tab inactivity.");
+    }
+  } else {
+    if (wasPlayingBeforeHidden) {
+      try {
+        backgroundMusic.play();
+        console.log("Music resumed due to tab activity.");
+      } catch (error) {
+        console.error("Error resuming music:", error);
+      }
+      wasPlayingBeforeHidden = false;
+    }
+  }
+});

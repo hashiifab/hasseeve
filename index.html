@@ -63,15 +63,33 @@
       type="image/x-icon"
     />
 
-    <!-- Load fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-      fetchpriority="low"
-      crossorigin="anonymous"
-    />
+    <!-- Preconnect (biar DNS & TLS handshake dilakukan lebih awal) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- Preload font stylesheet (kasih tahu browser: ini penting, siapin dulu) -->
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+/>
+
+<!-- Lazy-load stylesheet (non-blocking) -->
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+  media="print"
+  onload="this.media='all'"
+/>
+
+<!-- Fallback kalau JS mati -->
+<noscript>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+  />
+</noscript>
+
 
     <!-- Inline critical CSS -->
     <style>
@@ -114,9 +132,24 @@
       href="./assets/images/my-avatarr.webp"
       fetchpriority="high"
     />
-  </head>
+      <audio id="background-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</head>
 
   <body>
+
+    <div class="music-controls-container">
+      <button id="music-toggle-button" class="floating-music-button">
+        <ion-icon name="musical-notes"></ion-icon>
+      </button>
+      <div class="music-controls-popup" id="music-controls-popup">
+        <button id="play-pause-button">Play</button>
+        <input type="range" id="speed-slider" min="0.5" max="2" step="0.1" value="1">
+        <span id="speed-display">1x</span>
+      </div>
+    </div>
     <!--
     - #MAIN
   -->
@@ -415,41 +448,41 @@
     <div class="tech-icons">
 
       <!-- ⚙️ Languages -->
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tech-icon" width="40" height="40" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tech-icon" width="40" height="40" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tech-icon" width="40" height="40" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="tech-icon" width="40" height="40" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/html5-original.svg" alt="HTML5" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/css3-original.svg" alt="CSS3" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/javascript-original.svg" alt="JavaScript" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/typescript-original.svg" alt="TypeScript" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/dart-original.svg" alt="Dart" class="tech-icon" width="40" height="40" />
 
       <!-- 🖥️ Frontend -->
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/react-original.svg" alt="React" class="tech-icon" width="40" height="40" />
       <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzg3Nzc3Nzc3Nzc2NzU3Ny01Nf/AABEIAB8AIAMBEQACEQEDEQH/xAAZAAACAwEAAAAAAAAAAAAAAAAFBwEEBgP/xAAtEAABAwIEAwcFAQAAAAAAAAABAgMEBREABiExQVGREhQiI3GBsRUkQmGhE//EABsBAAICAwEAAAAAAAAAAAAAAAQFAwYAAgcB/8QALhEAAQMDAgMHAwUAAAAAAAAAAQACAwQRMQUhEkFRImFxobHR8AbB4RMUMoGS/9oADAMBAAIRAxEAPwBnzcyOU+c7GkwrhJ0UlzdPA2thjFQiWMPa5LXVz45Cx7PNSnMKZyLww412dF9sDXlbfFY+opKmgdGxjrcV8d1uoTegLKgEkYVd+qmL2X5BedQlQ8CDck+mE+lCor61kbnmw3NztYfmyNmY2OMkBRCza9UKozCi06xUvxqcc1Skbm1tNMdCfp7GQmUvuOVufRL+E81ZzjTe9Qe9sp86OLqt+SOPTfrjTTp+CTgOD6oSohD+1zCyVKnNMpLaiorccAAA9MKvqvSqmqInjsGRtJJJ/vbPRMNMcyJpackohOmiLGW6dSBoOZ4YpGlae7UatlOMHPcBk+3fZOX9lt0WyLS1R4SqlJF5EvVJO4RuOu/THTdRlbcU8ezWbfPDCSzHtWWoOuhwtUKVmaIC6FVyWR2WXLuMG17DiPb4tiywCLUaUxTC4Ozhj06+6Kpm73bkLvToS67WWICyVR4yQ5KVzPL329zyxXtFpYqCnlrWixlJ4B0Zfb3/AMphVScDN8/dMsAAAAWA2AxGkqnGLEHzVR/rNJWy2B3lvzGFHTxDhfkdv7wwZQ1P7eUE/wATsfBT08ojkBOOa55Qoxo9KAfH3j5/0kG9yCdk3/Xzc8ce11Q2WS0ezG7Dw+eS2q5v1ZNsDCOYCQy//9k=" alt="Vite" class="tech-icon" width="40" height="40" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/flutter-original.svg" alt="Flutter" class="tech-icon" width="40" height="40" />
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAPFBMVEX////G6fxsyvk/v/g4vfhhyPmz4vuK1PoAtfckufgvu/hTxPn6/f+h2/tGwPjS7v255fxMwviT1/qn3vsZjXhWAAAAbElEQVR4AeWOCQqAMAwEq11r06b3//9qAwiI0QfowHINC2N+yLJabE53uycgUGTtF11CmDqLLVdZ57iJhSt9V+4cCQB5a1RGJgr9FrrW866GbmpoGylISlNC3RxnsbY+hLbX0GSJIKE6zOajHN4ZA8/fNs9XAAAAAElFTkSuQmCC" alt="Tailwind CSS" class="tech-icon" width="40" height="40" />
 
       <!-- 🧩 Backend -->
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="tech-icon" width="40" height="40" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" alt="Prisma" class="tech-icon" width="40" height="40" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/nodejs-original.svg" alt="Node.js" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/prisma-original.svg" alt="Prisma" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/laravel-original.svg" alt="Laravel" class="tech-icon" width="40" height="40" />
 
       <!-- 🌐 API & Workflow -->
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACyUlEQVR4Aa3XA4xcURSA4bNGbdu2bds2l2njNKhtO65tt0Ft23bXnNM/yZvkFcO3L/nOjWauccTVp+H1BP4ojzDsxCPEwGaIwzPsxyRURQBExzcQrz6jYj/UxSo8RyrUhTS8wWY0RSBEw+q6W3Fd1BMUwBx8gnrpK7pCdKIbDdCwevbK6+AcbFALDiEfBP7wgZMhB5rjIdSi26gEQTCmoIdG1RNKh5XXyaDKP6EDRCcgvN54JOIVmkPwTwMK4hzUokSEM50+lII2+AA1XEZxmCoPq+dLOQdqkQ3LEQxBedyAmmEZ/CFCENTDR6hFR5AXglzY52R3NIEI+9PX2Odq0V1UgSAIC5EOdWAD/IVQAc+gFnxGJ4iOqSOU4xAPdeIVqgghDKlQLyUhWsPq2xdda7yHmtjw1mA+MaOEsANqwSqEuFh0D1ETtXAXatgthEdQLx1DftOi2wv9jwvIAUE0bFA8FsIvqBceoBoEgViAdCfT1BeCKvgERYwQ0i1dMiNrC+VYNxbdMgjymKYhzZsGJGOycXiJedG5sBSCvLgHRao3U7AWoRCUw3U3j+deEFTBZyh+eroI76OYcXwHUG6EuuEW8kAwyfx/nm7DOygCHhj1fChb44abB1V/tDPfttjq6UFkw16UhRjKYjfSoE7EIxZqSME4+1H8HOqBG2htunJzYg7ioG56grJC8PYy+oDxNCLIdBaMwBuoG5bxW1+r13ECFiM37G/KprgMdeI9akOEAEsPknQcREWIoSS2OVhbNswwLq8MfZLdQQf4QpAN0xADNTmF/HD4HH9o8TEaiRAIAjAYL03nSC2IRtRzkBNYf5YnYiXygQdKA6FshG1oAYGTxCTCemICG46hmkY1sncuGD5wlR1laGp2DkXgZXIaRnLKaGClB8lpKl5iLRoiwP0GuE7PJ2I7HuIX0pCOGDzCLkSgIvzdqfg3D6KTNRlCvVEAAAAASUVORK5CYII=" alt="Postman" class="tech-icon" width="40" height="40" />
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAeFBMVEVHcEz/bTP/bjf/URz/OAf/QxT/dTr/ZS3/ZS7/VB//SBb/NgX/RRP/cDb/eTz/gUX/MgL/OAj/bTT/fkD/gEP/fED/YSr/LwD/VB7/Thr/NAP/mFn/mlv/f0L/cDf/Thr/Xyj/MQD/j1H/djz/Ogj/h0r/azL/QA0oRg/nAAAAG3RSTlMA6T1yZwsc/ir7SOL50mPR9rqM9Jy7pHpVeKWAVNpCAAAA70lEQVQoka3SyZaCMBAFUIZoCKOo3Q5JZR7+/w872h4NIK58Czb3FJU8yLIvpfpgxVCs2naAn+0aHgHguHlv/SHioX9/mMGAM5Av11Z1tjdGU+Bmubbr+o47SrXhvJwPep97oDGO+3x22z3GmOsbUsD4d4q5lNjdjWov5WRrhaXk/0YZSDkZPRMiH4MxmJC0iZII/DRmBDkneBGCsyeCEJcEUSt8im161aoN8vVaH9o6PdEYBDxGmROhmTZkrdB3ZZpYi6YtIKvCrSLtrbLjrNysbJRSwcbH7rr83vW12UVpRrSgmE2BTidUr/wmX8wfIhsaj16eg9cAAAAASUVORK5CYII=" alt="Hono" class="tech-icon" width="40" height="40" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/docker-original.svg" alt="Docker" class="tech-icon" width="40" height="40" />
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAM1BMVEVHcEzrS3HrS3HrS3HrS3HrSnPqS3HqS3HqS3HrS3HqS3HrSnHqS3HqS3HqS3HrS3HqS3FCR2ANAAAAEXRSTlMAKXFeFwVB6924gIjOxFOrmtUKd24AAACZSURBVHgB3dBBDgMhCAXQz4gACur9T9vWtLOpJxgSVo+QD3h80VX4CLVC1NQPSqX1FllFx5/xNJ/vBtlGakuAOlZjQKww16IeSQA4LVRQNM2BFow92T+GYQK3qQui7truVNhIcM2NEXptuuNl5HdtAj14h/gx9TWAWlZnQHRQhGsBcDoller0en6cK+GMADjU9nvOenXCw+oFhVkFUeZv5wAAAAAASUVORK5CYII=" alt="n8n" class="tech-icon" width="40" height="40" />
 
       <!-- 💾 Databases & Cloud -->
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Supabase" class="tech-icon" width="40" height="40" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="tech-icon" width="40" height="40" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/supabase-original.svg" alt="Supabase" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/firebase-plain.svg" alt="Firebase" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/postgresql-original.svg" alt="PostgreSQL" class="tech-icon" width="40" height="40" />
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAkFBMVEUaGhq//7gaGBm6/7UaGhoXAAAaGhoaGhoaGhoaGhoIARAYExQGAAGi4p8TBw8vvasx3sodLysd//kf3dE0//FI/uZMc1gfvbJBwqmNxo5j5b1DfmaDwI1Ho4ll/9tE38S0+7N7/dBspXyW2p4Z49qU8LQYUlBci2g4moV4soQ5sJslSEA2UUB4zZ4807tap4ZJosgLAAAACnRSTlP+////Hv//zsYcvzrRhAAAAPJJREFUKJF909lygyAUgGGWShJAIiaKTSlOXJql2/u/XQGngbj9N158cwZGj2C3AWQ2sNmB7Ty5tmBhzs+umNXhwZI4LlCE7EN1B1vm+qm+y0HBYLnr6CqKou5xKR6YHPJOKbX33e/XFrY8YJer+MhXmFIUTarkcUdEF5BzziZ43HvkTa8lG2E2IPuEGGo6j+INYgwvowtlRUCMSz3C6h9vGKftE9YBy8ZNL6E9cYoMIY9UphDq6PXVpiLS5lCIL91IFrAy5uRzSBinLHxPJE/GnG09vPHJJjB5fXf9XghaXhMRGxkt2JOtrh9YX+qXld/hDw2fHiyEgYhLAAAAAElFTkSuQmCC" alt="NeonDB" class="tech-icon" width="40" height="40" />
 
       <!-- 🧠 AI & Productivity Tools -->
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode" class="tech-icon" width="40" height="40" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="tech-icon" width="40" height="40" />
-       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="tech-icon" width="40" height="40" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab" class="tech-icon" width="40" height="40" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/vscode-original.svg" alt="VSCode" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/git-original.svg" alt="Git" class="tech-icon" width="40" height="40" />
+       <img src="./assets/images/tech-icons/github-original.svg" alt="GitHub" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/gitlab-original.svg" alt="GitLab" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/figma-original.svg" alt="Figma" class="tech-icon" width="40" height="40" />
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAA80lEQVR4AZTRIYyDMBjF8efxBn3qfFD1IcGiUFOIyVokAos6h8IjEXNIfD6DqUXOVb7jNnK027pkf9mfeE0LvukjtOtifJRp6BpdqAi3kquDLSJV6KYbJjF/5zXGA8/o6SU4OYhyHzQyX4bupwSWA4FvOMUKpYvVtjlOsqz322QunumXP6A1MpGcK62eUQGoSKPBZ2QOQMj+JWYREIUwzVqgCWFCACaIM5AMIWQJxEG0ADxsdswUyfEB7R0lQm7J3EfKDcdZVm4ZbhX/yM55eHs1Mk84kDmaWp9S51O7AxkDwFda6Lrth8s+gN/BTaMgUWMCAITxMqVHQtVcAAAAAElFTkSuQmCC" alt="Notion" class="tech-icon" width="40" height="40" />
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAb1BMVEUUEgsNCgAJBgAkIh1QT0o9OzYfHRgODAAYFg9FRD1ZWFNDQTw7OTRVVE8uLCVKSUQsKiMyMCobGRO8u7r09PTo6Ofh4N+BgX7///+hoJ3W1dLc29hoZ2PIx8R1dHCzsq5gX1tycW1tbGiXlpMAAABPX0V9AAAA0ElEQVR4Ab3RRYLEIAAAQYgnaNyDLP//4khcjzt9LRzwiyB8JMt2XO+e/SCMIoQwuDKEOCKEoE/0rBYlXyNozD6wh1g4xum3mCebQZRm+b4C+xsyVmbVVlFTuEPioHqhvGlcfEBCmJPO1Jb4hJ/Crsjapmn6GJ1x7Gtt595gN3Ttx0SMLiiVUiNK94yRHiZshdbsgM5IIzZaqaFDPljj3YLt34gc7DJ4Xrbv1KCwOf2mYcOguqJUAzM+OGcl0aBTHSUWuMvQTnEDHoLGQPD/vQEqLRggRsFNbQAAAABJRU5ErkJggg==" alt="Cursor AI" class="tech-icon" width="40" height="40" />
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEUKCw0JAAcGAAAVUjImrGclp2QIAAAbeUg0/JMz9o8bdEUz95Ay8Ywx7Yoz+JAZZD8ZZ0AfilIPMSAMGxUhklcQNiMt1Hwpv3EMGBMFAAAXWjkKDw8szHgrxnV8QLC/AAAAgklEQVR4AdWQRQLEIAwAE0rxutv/n7ku2EqPHZx44HggCcCXLKGpB02eUsaF9BCcPYVKm8zBaGUJ84KwF6TIXWHJLuf1AxmyMhQyVTHAmjYRIZZGtqTrxTDuFNpu/06IC1FMFrMlhKXB1PhNsDpPc2lhhCUEVq2bzVogWNLJBeFwnAFqMQ58gkM9SAAAAABJRU5ErkJggg==" alt="Trae AI" class="tech-icon" width="40" height="40" />
@@ -457,7 +490,7 @@
 
       <!-- ☁️ Deployment -->
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAZ0lEQVR4AWMYwkBICI/krCm45eQ/ftfCKbnp//9FuOTsfv3//98Fh+TB/0BwELtc8H8wiMMqeRUieRWbXPF/KCjGIvkYJvkYU27KfzjoxAi4jwjJ7/KY/keA1ahy3E2dSKCJm2FEAQAD1l2xzdeQ1AAAAABJRU5ErkJggg==" alt="Vercel" class="tech-icon" width="40" height="40" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg" alt="Netlify" class="tech-icon" width="40" height="40" />
+      <img src="./assets/images/tech-icons/netlify-original.svg" alt="Netlify" class="tech-icon" width="40" height="40" />
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEBklEQVR4AaSXA9BjSxSEvz5v7WSfbdu2bdu2bavwbNu2bdtWss++vchU7Wzwbyp/V5066ZmLHvS5E9EGyk+dG/D/sshTgkFmzFwAJF6kbCwX4Jer8x78Mi0g2kDpyXOORj5M6aXGqEkG5y9HNf4/eO3KvAfd3pGA8hPnT2/5dXDvMV+WCUicvE8FSQDAR5Znrc574F/UIboc+WOXBI5TcfSWAzsghR1A7bccYCEEFiCU+j0qaxqsvUloW4DwsrZWkwUpZOGU8/ZcGFlkbQeWnz9l0rYFlB65rJcdp6ZRYAKlTD66LsIpq5YHgo5tWwBoR6zZsgc0LkG+DGTLkrLq+rE2LT132oJj3YTlh68a1/hd5KFgGq1HzhHGmQUFyZrGGU+b9hkXxaLVhfYtAHrQBLbmRroej97ZtkEFsrCMDBZgQCQe42OvbtxTBOAsAmHAC6HYGLiy6QyUHriun3v88dewpbYq6AClJ85bV+KGvEYgk9cQ8FfAzNWF9vglyDDkoRsCxtk+vbwj2HGzrXuU7Rc17ptJQPs3zEDp/lvWFMXlwMyV5df5kg5RevzCmQUvW+6dl2YJPJr/KZg1SCjde1sfWaeOsovj+KH33RJ0iOri274NOldWPgs48RR9IY4NEnDsiWMaHIA2K9D8dAfW0Xb8AA12zbgWDYDy3XdPLMeBY5ZXnVm+57YedIjKEltXQIdn69+sltwZafTHmxiMAxepk1gAaWO6AaGLbb2Wleu8fFexjlbpzvvnF34aMY6zQmIVCEbZpbLSqr/QIcqPXra04aHGouV9RuyV0wPHiTjGSQpTCNXyJEYH0g0ULh7Fuim3oxzvYJ0NEDhmrq/rJufac8QemZoOUasp2h/0py2oxb7VJbb5KwnQ1RDUKcS5XdDJQ26/o3NbLrXZxzjOTIO6p7DvJSGEjsX6zha2IOXkYRJfR+P0XJJuQSdCfIFj37zSRmWNJStYh4tAjT7N98XpQ++6v2NbVpfe+BdZO1aW3uTtxvNAzS6vNPNrJmgOm8NLdz0YdIgC3d/yUFq65cklhR+h6ReMnH8HHuasH4xTVj1P1jbsX11+ndu7PBWXb3nqevB6jQLc6oOCGvoN2X2Jv2KK+asrrPNfl0cyWwfi+JPMlllOIVTXrrGfDffNX95SQHXthT/GOr35gwSorp43CnVjvqm64hoP0wJBA+Jk0BdktlTuhmbH8RR5m2r8T6z9AdoWUFlngV+wDm45pWl0SryFyBRxenXlVT5uX0BCMM7VEM80rn9A0fj/oEX+StaJ5GhXwE/rzltg7Yz1Ha4rTCnkjDdE/Ipjx8qqK/zGWCC6QOmGF/sJTwqE0zl/+KDZEDW7gWl4VvwHVPPqnZ/jBwYiAACxxuU75+pLpAAAAABJRU5ErkJggg==" alt="Easypanel" class="tech-icon" width="40" height="40" />
 
     </div>

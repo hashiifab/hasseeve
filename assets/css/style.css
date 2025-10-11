@@ -2060,3 +2060,108 @@ a:hover {
   color: var(--orange-yellow-crayola);
   text-decoration: underline;
 }
+
+/*-----------------------------------*
+ * #CUSTOM STYLE
+/*-----------------------------------*/
+
+.music-controls-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--eerie-black-1);
+  color: var(--white-2);
+  padding: 15px 25px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: var(--shadow-5);
+  border: 1px solid var(--jet);
+}
+
+.music-controls-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.music-controls-popup button {
+  background-color: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: var(--fw-500);
+  transition: background-color 0.25s ease;
+}
+
+.music-controls-popup button:hover {
+  background-color: hsl(45, 100%, 65%);
+}
+
+.music-controls-popup input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 120px;
+  height: 8px;
+  background: var(--jet);
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.music-controls-popup input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--orange-yellow-crayola);
+  cursor: pointer;
+}
+
+.music-controls-popup input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--orange-yellow-crayola);
+  cursor: pointer;
+}
+
+.music-controls-popup span {
+  font-weight: var(--fw-500);
+  color: var(--light-gray);
+}
+
+.floating-music-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: var(--shadow-5);
+  z-index: 1001;
+  transition: background-color 0.25s ease;
+}
+
+.floating-music-button:hover {
+  background-color: hsl(45, 100%, 65%);
+}
+
+.floating-music-button ion-icon {
+  --ionicon-stroke-width: 30px;
+}
